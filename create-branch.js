@@ -1,4 +1,3 @@
-
 // ==UserScript==
 // @name         Github - Create branch from issue
 // @version      0.1
