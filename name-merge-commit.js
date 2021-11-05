@@ -3,6 +3,8 @@
 // @version      0.1
 // @description  Name the merge commit after the issue
 // @match        https://github.com/*/pull/*
+// @updateURL    https://raw.githubusercontent.com/holmbergjonas/github-browser-scripts/main/name-merge-commit.js
+// @downloadURL  https://raw.githubusercontent.com/holmbergjonas/github-browser-scripts/main/name-merge-commit.js
 // ==/UserScript==
 
 const fn = function(){
