@@ -1,9 +1,11 @@
 // ==UserScript==
 // @name         Github - Create branch from issue
 // @version      0.1
+// @run-at       document-end
 // @description  This is a compact version of https://github.com/bumbeishvili/create-branch-from-issue
 // @match        https://github.com/*/issues/*
-// @grant        none
+// @updateURL    https://raw.githubusercontent.com/holmbergjonas/github-browser-scripts/main/create-branch.js
+// @downloadURL  https://raw.githubusercontent.com/holmbergjonas/github-browser-scripts/main/create-branch.js
 // ==/UserScript==
 
 function stringToSlug(str) {
