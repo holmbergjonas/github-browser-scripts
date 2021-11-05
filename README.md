@@ -1,1 +1,1 @@
-# Scripts for Tampermonkey to work with GitHub
+# Tampermonkey for GitHub
