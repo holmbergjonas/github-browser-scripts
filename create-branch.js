@@ -2,6 +2,8 @@
 // ==UserScript==
 // @name         Github - Create branch from issue
 // @version      0.1
+// @author       Jonas Holmberg / David Bumbeishvili
+// @namespace    https://github.com/holmbergjonas
 // @run-at       document-end
 // @description  This is a compact version of https://github.com/bumbeishvili/create-branch-from-issue
 // @match        https://github.com/*/issues/*
