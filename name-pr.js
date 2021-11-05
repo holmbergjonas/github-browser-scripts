@@ -4,6 +4,8 @@
 // @description  Name new PR with issue name instead of first commit message
 // @match        https://github.com/*/compare/*
 // @grant        none
+// @updateURL    https://raw.githubusercontent.com/holmbergjonas/github-browser-scripts/main/name-pr.js
+// @downloadURL  https://raw.githubusercontent.com/holmbergjonas/github-browser-scripts/main/name-pr.js
 // ==/UserScript==
 
 const fn = function () {
