@@ -1,3 +1,4 @@
+
 // ==UserScript==
 // @name         Github - Create branch from issue
 // @version      0.1
@@ -22,7 +23,7 @@ function stringToSlug(str) {
     return str;
 }
 
-const fn = function() {
+(function() {
     'use strict';
 
     const $button = document.createElement('div');
@@ -52,4 +53,4 @@ const fn = function() {
                 $form.submit();
             });
     });
-}();
+})();
