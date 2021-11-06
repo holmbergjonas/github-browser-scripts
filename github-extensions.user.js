@@ -33,13 +33,11 @@ var fn = function() {
     const url = window.location.href;
     if(url.includes("/issues/"))
     {
-        console.log("Issue");
         const existingButton = document.querySelector("#create_branch_button");
         if(existingButton){
             return;
         }
 
-        console.log("Issue perform");
         const button = document.createElement('div');
         button.innerHTML =
             '<button id="create_branch_button" style="margin-right:10px!important;background-color:#0C61FE" class="d-inline-block float-none m-0 mr-md-0 btn btn-sm btn-primary ">Create Branch</button>';
@@ -70,7 +68,6 @@ var fn = function() {
     }
     else if(url.includes("/compare/")) // Name the pull request
     {
-        console.log("Compare");
         // If not header actions element presented, return since this is not an issue
         if (!document.querySelector('#pull_request_title')) return;
 
@@ -78,8 +75,6 @@ var fn = function() {
         const branchUrlName = url.split('?')[0];
 
         if(updatedPullRequests.includes(branchUrlName)) return;
-
-        console.log("Compare perform");
 
         const branchClean = branchUrlName.replace(/\//g, "");
         const branchName = branchClean.replace(/-/g, " ");
@@ -95,7 +90,6 @@ var fn = function() {
     }
     else if(url.includes("/pull/")) // Name the merge commit
     {
-        console.log("Pull");
         const prId = window.location.href.split('/').pop();
         if(updatedMergeCommits.includes(prId)) return;
 
@@ -106,8 +100,6 @@ var fn = function() {
         if (!mergeField) return;
 
         if(!(window.getComputedStyle(mergeField).display === "none")) return;
-
-        console.log("Pull perform");
 
         const rawTitle = titleField[0].innerHTML
         const titleArray = rawTitle.split(' ');
