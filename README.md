@@ -7,4 +7,4 @@ Scripts to add functionality to GitHub. Install directly with [this][ge-raw] lin
  
 
   
-[ge-raw]: https://github.com/holmbergjonas/github-browser-scripts/blob/main/github-extensions.user.js
+[ge-raw]: https://github.com/holmbergjonas/github-browser-scripts/raw/main/github-extensions.user.js
