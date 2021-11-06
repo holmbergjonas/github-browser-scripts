@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Github - Create branch from issue, Name PR from issue and name merge commit from issue
 // @version      0.1
-// @description  Create branch button is partially similar to https://github.com/bumbeishvili/create-branch-from-issue
+// @description  Create branch button originates from https://github.com/bumbeishvili/create-branch-from-issue
 // @match        https://github.com/*
 // @updateURL    https://raw.githubusercontent.com/holmbergjonas/github-browser-scripts/main/github-extensions.user.js
 // @downloadURL  https://raw.githubusercontent.com/holmbergjonas/github-browser-scripts/main/github-extensions.user.js
@@ -28,7 +28,7 @@ var updatedMergeCommits = [];
 var fn = function() {
     'use strict';
 
-    setTimeout(fn, timeout);
+    //setTimeout(fn, timeout);
 
     const url = window.location.href;
     if(url.includes("/issues/"))
