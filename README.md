@@ -1,15 +1,10 @@
 # Tampermonkey for GitHub
 
-Scripts to add functionality to GitHub.
+Scripts to add functionality to GitHub. Install directly with [this][ge-raw] link.  
+ - Create branch button on issue pages. The branch will be named after the issue
+ - When creating PR the name will be change to the name of the issue
+ - When merging a PR the name of the merge commit will be changed to the format: '(PR #189) Update README.md, closes #201'
+ 
 
-
-| Script                                 | Install            |
-|----------------------------------------|:------------------:|
-| Name PR from issue                     | [install][np-raw]  |
-| Name merge commit from issue           | [install][nmc-raw] |
-| Create branch from issue               | [install][cb-raw]  |
   
-  
-[np-raw]: https://github.com/holmbergjonas/github-browser-scripts/blob/main/name-pr.user.js
-[nmc-raw]: https://github.com/holmbergjonas/github-browser-scripts/blob/main/name-merge-commit.user.js
-[cb-raw]: https://github.com/holmbergjonas/github-browser-scripts/blob/main/create-branch.user.js
+[ge-raw]: https://github.com/holmbergjonas/github-browser-scripts/blob/main/github-extensions.user.js
