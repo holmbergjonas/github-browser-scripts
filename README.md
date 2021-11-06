@@ -3,11 +3,11 @@
 Scripts to add functionality to GitHub.
 
 
-	| Script                                 | Install            |
-	|----------------------------------------|:------------------:|
-	| Name PR from issue                     | [install][np-raw]  |
-	| Name merge commit from issue           | [install][nmc-raw] |
-	| Create branch from issue               | [install][cb-raw]  |
+| Script                                 | Install            |
+|----------------------------------------|:------------------:|
+| Name PR from issue                     | [install][np-raw]  |
+| Name merge commit from issue           | [install][nmc-raw] |
+| Create branch from issue               | [install][cb-raw]  |
   
   
 [np-raw]: https://github.com/holmbergjonas/github-browser-scripts/blob/main/name-pr.user.js
