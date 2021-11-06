@@ -1,12 +1,17 @@
 // ==UserScript==
+// @author       https://github.com/holmbergjonas
+// Create branch button originates from https://github.com/bumbeishvili/create-branch-from-issue
 // @name         Github - Little Helpers
 // @version      0.1
 // @description  Create branch from issue, Name PR from issue and name merge commit from issue
-// @disclaimer   Create branch button originates from https://github.com/bumbeishvili/create-branch-from-issue
 // @match        https://github.com/*
 // @updateURL    https://raw.githubusercontent.com/holmbergjonas/github-browser-scripts/main/github-extensions.user.js
 // @downloadURL  https://raw.githubusercontent.com/holmbergjonas/github-browser-scripts/main/github-extensions.user.js
 // ==/UserScript==
+
+const timeout = 400;
+var updatedPullRequests = [];
+var updatedMergeCommits = [];
 
 function stringToSlug(str) {
     str = str.replace(/^\s+|\s+$/g, ''); // trim
@@ -22,14 +27,10 @@ function stringToSlug(str) {
     return str;
 }
 
-const timeout = 800;
-var updatedPullRequests = [];
-var updatedMergeCommits = [];
-
 var fn = function() {
     'use strict';
 
-    //setTimeout(fn, timeout);
+    setTimeout(fn, timeout);
 
     const url = window.location.href;
     if(url.includes("/issues/"))
@@ -42,7 +43,10 @@ var fn = function() {
         const button = document.createElement('div');
         button.innerHTML =
             '<button id="create_branch_button" style="margin-right:10px!important;background-color:#0C61FE" class="d-inline-block float-none m-0 mr-md-0 btn btn-sm btn-primary ">Create Branch</button>';
-        document.querySelector('.gh-header-actions').prepend(button);
+        const headerActions = document.querySelector('.gh-header-actions');
+        if(headerActions == null) return;
+
+        headerActions.prepend(button);
 
         const repoUrl = window.location.href.split('issues')[0];
 
@@ -115,5 +119,5 @@ var fn = function() {
     }
 };
 
-// We need to poll since GitHub does not redirect to new pages but calls them using javascript
+// We need to poll since some page changes are not changes in navigation
 setTimeout(fn, timeout);
