@@ -1,7 +1,8 @@
 // ==UserScript==
-// @name         Github - Create branch from issue, Name PR from issue and name merge commit from issue
+// @name         Github - Little Helpers
 // @version      0.1
-// @description  Create branch button originates from https://github.com/bumbeishvili/create-branch-from-issue
+// @description  Create branch from issue, Name PR from issue and name merge commit from issue
+// @disclaimer   Create branch button originates from https://github.com/bumbeishvili/create-branch-from-issue
 // @match        https://github.com/*
 // @updateURL    https://raw.githubusercontent.com/holmbergjonas/github-browser-scripts/main/github-extensions.user.js
 // @downloadURL  https://raw.githubusercontent.com/holmbergjonas/github-browser-scripts/main/github-extensions.user.js
