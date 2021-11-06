@@ -6,8 +6,8 @@
 // @run-at       document-end
 // @description  This is a compact version of https://github.com/bumbeishvili/create-branch-from-issue
 // @match        https://github.com/*/issues/*
-// @updateURL    https://raw.githubusercontent.com/holmbergjonas/github-browser-scripts/main/create-branch.js
-// @downloadURL  https://raw.githubusercontent.com/holmbergjonas/github-browser-scripts/main/create-branch.js
+// @updateURL    https://raw.githubusercontent.com/holmbergjonas/github-browser-scripts/main/create-branch.user.js
+// @downloadURL  https://raw.githubusercontent.com/holmbergjonas/github-browser-scripts/main/create-branch.user.js
 // ==/UserScript==
 
 function stringToSlug(str) {
