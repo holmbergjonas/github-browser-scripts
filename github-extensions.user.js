@@ -2,14 +2,14 @@
 // @author       https://github.com/holmbergjonas
 // Create branch button originates from https://github.com/bumbeishvili/create-branch-from-issue
 // @name         Github - Little Helpers
-// @version      0.1
+// @version      0.2
 // @description  Create branch from issue, Name PR from issue and name merge commit from issue
 // @match        https://github.com/*
 // @updateURL    https://raw.githubusercontent.com/holmbergjonas/github-browser-scripts/main/github-extensions.user.js
 // @downloadURL  https://raw.githubusercontent.com/holmbergjonas/github-browser-scripts/main/github-extensions.user.js
 // ==/UserScript==
 
-const timeout = 400;
+const timeout = 4400;
 var updatedPullRequests = [];
 var updatedMergeCommits = [];
 
@@ -103,8 +103,6 @@ var fn = function() {
 
         const mergeField = document.querySelector('#merge_title_field');
         if (!mergeField) return;
-
-        if(!(window.getComputedStyle(mergeField).display === "none")) return;
 
         const rawTitle = titleField[0].innerHTML
         const titleArray = rawTitle.split(' ');
