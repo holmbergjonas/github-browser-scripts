@@ -9,7 +9,7 @@
 // @downloadURL  https://raw.githubusercontent.com/holmbergjonas/github-browser-scripts/main/github-extensions.user.js
 // ==/UserScript==
 
-const timeout = 4400;
+const timeout = 700;
 var updatedPullRequests = [];
 var updatedMergeCommits = [];
 
