@@ -2,7 +2,7 @@
 // @author       https://github.com/holmbergjonas
 // Create branch button originates from https://github.com/bumbeishvili/create-branch-from-issue
 // @name         Github - Little Helpers
-// @version      0.2
+// @version      0.3
 // @description  Create branch from issue, Name PR from issue and name merge commit from issue
 // @match        https://github.com/*
 // @updateURL    https://raw.githubusercontent.com/holmbergjonas/github-browser-scripts/main/github-extensions.user.js
