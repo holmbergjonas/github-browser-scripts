@@ -11,13 +11,13 @@
 const timeout = 700;
 var updatedPullRequests = [];
 
-var fn = function() {
+var fn = function () {
     'use strict';
 
     setTimeout(fn, timeout);
 
     const url = window.location.href;
-   if(url.includes("/compare/")) // Name the pull request
+    if (url.includes("/compare/")) // Name the pull request
     {
         // If not header actions element presented, return since this is not an issue
         if (!document.querySelector('#pull_request_title')) return;
@@ -25,17 +25,18 @@ var fn = function() {
         const url = window.location.href.split('compare')[1];
         const branchUrlName = url.split('?')[0];
 
-        if(updatedPullRequests.includes(branchUrlName)) return;
+        if (updatedPullRequests.includes(branchUrlName)) return;
 
         const branchClean = branchUrlName.replace(/\//g, "");
-        const branchName = branchClean.replace(/-/g, " ");
+        const branchParts = branchClean
+            .replace(/-/g, " ")
+            .replace("master...", "")
+            .split(" ")
 
-        const nameArray = branchName.split(' ');
-        const issueId = nameArray[0].replace("master...", "");
-        const title = nameArray.slice(1).join(' ');
+        const title = branchParts.slice(2).join(' ');
 
         const titleEl = document.querySelector('#pull_request_title');
-        titleEl.value = `${title}, closes #${issueId}`;
+        titleEl.value = `${branchParts[0]}-${branchParts[1]} - ${title}`;
 
         updatedPullRequests.push(branchUrlName);
     }
