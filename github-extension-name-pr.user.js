@@ -1,16 +1,15 @@
 // ==UserScript==
 // @author       https://github.com/holmbergjonas
-// @name         Github - Naming
+// @name         Github - Name pr with branch name
 // @version      0.1
-// @description  Name PR from issue and name merge commit from issue
+// @description  Name PR from branch
 // @match        https://github.com/*
-// @updateURL    https://raw.githubusercontent.com/holmbergjonas/github-browser-scripts/main/github-extensions-naming.user.js
-// @downloadURL  https://raw.githubusercontent.com/holmbergjonas/github-browser-scripts/main/github-extensions-naming.user.js
+// @updateURL    https://raw.githubusercontent.com/holmbergjonas/github-browser-scripts/main/github-extensions-name-pr.user.js
+// @downloadURL  https://raw.githubusercontent.com/holmbergjonas/github-browser-scripts/main/github-extensions-name-pr.user.js
 // ==/UserScript==
 
 const timeout = 700;
 var updatedPullRequests = [];
-var updatedMergeCommits = [];
 
 var fn = function() {
     'use strict';
@@ -39,28 +38,6 @@ var fn = function() {
         titleEl.value = `${title}, closes #${issueId}`;
 
         updatedPullRequests.push(branchUrlName);
-    }
-    else if(url.includes("/pull/")) // Name the merge commit
-    {
-        const prId = window.location.href.split('/').pop();
-        if(updatedMergeCommits.includes(prId)) return;
-
-        const titleField = document.getElementsByClassName('js-issue-title');
-        if (!titleField || !titleField[0]) return;
-
-        const mergeField = document.querySelector('#merge_title_field');
-        if (!mergeField) return;
-
-        const rawTitle = titleField[0].innerHTML
-        const titleArray = rawTitle.split(' ');
-        const title = titleArray.join(' ');
-
-        mergeField.value = `(PR #${prId}) ${title}`;
-
-        const mergeMessageField = document.querySelector('#merge_message_field');
-        mergeMessageField.value = "";
-
-        updatedMergeCommits.push(prId);
     }
 };
 
