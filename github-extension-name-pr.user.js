@@ -1,7 +1,7 @@
 // ==UserScript==
 // @author       https://github.com/holmbergjonas
 // @name         Github - Name pr with branch name
-// @version      0.2
+// @version      0.3
 // @description  Name PR from branch
 // @match        https://github.com/*
 // @updateURL    https://raw.githubusercontent.com/holmbergjonas/github-browser-scripts/main/github-extensions-name-pr.user.js
