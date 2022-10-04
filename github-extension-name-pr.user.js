@@ -36,7 +36,7 @@ var fn = function () {
         const title = branchParts.slice(2).join(' ');
 
         const titleEl = document.querySelector('#pull_request_title');
-        titleEl.value = `${branchParts[0]}-${branchParts[1]} - ${title}`;
+        titleEl.value = `${branchParts[0]}-${branchParts[1]}: ${title}`;
 
         updatedPullRequests.push(branchUrlName);
     }
